@@ -4,8 +4,8 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
     size_t dst_len = 0;
     size_t src_len = 0;
-    int i = 0;
-    int k;
+    size_t i = 0;
+    size_t k;
 
     while (dst[dst_len] != '\0' && dst_len < dstsize)
     {
