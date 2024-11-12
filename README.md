@@ -3,6 +3,7 @@ This project is about coding a C library.
 It will contain a lot of general purpose functions my programs will rely upon.
 
 **isalpha**
+
 The isalpha function in C is used to check if a given character is an alphabetic letter. It returns a non-zero (true) value if the character is an uppercase or lowercase letter (from 'A' to 'Z' or 'a' to 'z'), and zero (false) otherwise.
 
 **isdigit**
