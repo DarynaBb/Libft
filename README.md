@@ -36,21 +36,26 @@ The strlcat function in C is used to concatenate two strings, similar to strcat,
 
 **strchr**
 
-The strchr function in C searches for the first occurrence of a specified character in a string and returns a pointer to that character within the string. If the character c is found, strchr returns a pointer to the first occurrence of c in str.
+The `strchr` function in C searches for the first occurrence of a specified character in a string and returns a pointer to that character within the string. If the character c is found, strchr returns a pointer to the first occurrence of c in str.
 If c is not found, it returns NULL.
 
 **strrchr**
 
-The strrchr function in C is used to find the last occurrence of a character in a string. It searches for the specified character, starting from the end of the string and moving backward towards the beginning.
+The `strrchr` function in C is used to find the last occurrence of a character in a string. It searches for the specified character, starting from the end of the string and moving backward towards the beginning.
 If the character c is found: It returns a pointer to the last occurrence of c in the string.
 If the character c is not found: It returns NULL.
 
 **strncmp**
 
-The strncmp function in C compares the first n characters of two strings, s1 and s2. It returns an integer value based on the comparison:
-
+The `strncmp` function in C compares the first n characters of two strings, s1 and s2. It returns an integer value based on the comparison:
 If the first n characters of both strings are equal, strncmp returns 0.
 If the first differing character has a greater value in s1 than in s2, it returns a positive value.
 If the first differing character has a lesser value in s1 than in s2, it returns a negative value.
 
+**toupper**
 
+The `toupper` function in C is used to convert a lowercase letter to its corresponding uppercase letter. If the input character is a lowercase letter (from 'a' to 'z'), toupper will return the uppercase version of that letter. If the character is already uppercase or is not an alphabetic letter, it will return the character unchanged.
+
+**tolower**
+
+The `tolower` function in C is used to convert an uppercase letter to its corresponding lowercase letter. If the input character is an uppercase letter (from 'A' to 'Z'), tolower will return the lowercase version of that letter. If the character is already lowercase or is not an alphabetic letter, it will return the character unchanged.
