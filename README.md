@@ -62,4 +62,4 @@ The `tolower` function in C is used to convert an uppercase letter to its corres
 
 **atoi**
 
-The atoi (ASCII to integer) function in C converts a string to an integer. It reads characters in the string and interprets them as a numeric value, stopping at the first non-numeric character or at the end of the string. If the string starts with a valid integer format (including optional whitespace, an optional sign (+ or -), and digits), atoi will return the integer equivalent.
+The `atoi` (ASCII to integer) function in C converts a string to an integer. It reads characters in the string and interprets them as a numeric value, stopping at the first non-numeric character or at the end of the string. If the string starts with a valid integer format (including optional whitespace, an optional sign (+ or -), and digits), atoi will return the integer equivalent.
