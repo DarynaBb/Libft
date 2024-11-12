@@ -34,3 +34,8 @@ The strlcpy function in C is used to copy a string from a source to a destinatio
 
 The strlcat function in C is used to concatenate two strings, similar to strcat, but with added safety. It ensures that the destination buffer is not overrun and always ends with a null terminator if there is space for it. This function appends a source string (src) to the end of a destination string (dst) up to a specified total buffer size (dstsize).
 
+**strchr**
+
+The strchr function in C searches for the first occurrence of a specified character in a string and returns a pointer to that character within the string. If the character c is found, strchr returns a pointer to the first occurrence of c in str.
+If c is not found, it returns NULL.
+
