@@ -39,3 +39,9 @@ The strlcat function in C is used to concatenate two strings, similar to strcat,
 The strchr function in C searches for the first occurrence of a specified character in a string and returns a pointer to that character within the string. If the character c is found, strchr returns a pointer to the first occurrence of c in str.
 If c is not found, it returns NULL.
 
+**strrchr**
+
+The strrchr function in C is used to find the last occurrence of a character in a string. It searches for the specified character, starting from the end of the string and moving backward towards the beginning.
+If the character c is found: It returns a pointer to the last occurrence of c in the string.
+If the character c is not found: It returns NULL.
+
