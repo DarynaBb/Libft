@@ -59,3 +59,7 @@ The `toupper` function in C is used to convert a lowercase letter to its corresp
 **tolower**
 
 The `tolower` function in C is used to convert an uppercase letter to its corresponding lowercase letter. If the input character is an uppercase letter (from 'A' to 'Z'), tolower will return the lowercase version of that letter. If the character is already lowercase or is not an alphabetic letter, it will return the character unchanged.
+
+**atoi**
+
+The atoi (ASCII to integer) function in C converts a string to an integer. It reads characters in the string and interprets them as a numeric value, stopping at the first non-numeric character or at the end of the string. If the string starts with a valid integer format (including optional whitespace, an optional sign (+ or -), and digits), atoi will return the integer equivalent.
