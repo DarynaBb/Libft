@@ -45,3 +45,12 @@ The strrchr function in C is used to find the last occurrence of a character in 
 If the character c is found: It returns a pointer to the last occurrence of c in the string.
 If the character c is not found: It returns NULL.
 
+**strncmp**
+
+The strncmp function in C compares the first n characters of two strings, s1 and s2. It returns an integer value based on the comparison:
+
+If the first n characters of both strings are equal, strncmp returns 0.
+If the first differing character has a greater value in s1 than in s2, it returns a positive value.
+If the first differing character has a lesser value in s1 than in s2, it returns a negative value.
+
+
