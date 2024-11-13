@@ -84,3 +84,10 @@ The `bzero` function in C is used to set a block of memory to zero. It takes two
 A pointer to the memory area (`void *s`), which is the address of the block you want to set to zero.
 The size of the memory block (`size_t len`), which is the number of bytes you want to set to zero.
 The function clears the specified area of memory by filling it with 0 values.
+
+**memcpy**
+
+The `memcpy` function in C is used to copy a block of memory from one location to another. 
+`dest`: A pointer to the destination memory block where the content will be copied.
+`src`: A pointer to the source memory block from which the content will be copied.
+`n`: The number of bytes to copy from src to dest.
