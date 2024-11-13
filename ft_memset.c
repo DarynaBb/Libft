@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void *memset(void *ptr, int value, size_t num)
+void *ft_memset(void *ptr, int value, size_t num)
 {
     size_t  i;
 
@@ -12,3 +12,4 @@ void *memset(void *ptr, int value, size_t num)
     }
     return (ptr);
 }
+
