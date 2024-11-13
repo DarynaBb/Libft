@@ -77,3 +77,10 @@ The `memset` function in C is used to set a block of memory to a specific value.
 `ptr`: A pointer to the memory block that you want to set.
 `value`: The value to set each byte of memory to. This is typically provided as an int, but it's cast to an unsigned char, so only the lowest 8 bits are used.
 `num`: The number of bytes to set in the memory block.
+
+**bzero**
+
+The `bzero` function in C is used to set a block of memory to zero. It takes two arguments:
+A pointer to the memory area (`void *s`), which is the address of the block you want to set to zero.
+The size of the memory block (`size_t len`), which is the number of bytes you want to set to zero.
+The function clears the specified area of memory by filling it with 0 values.
