@@ -63,3 +63,11 @@ The `tolower` function in C is used to convert an uppercase letter to its corres
 **atoi**
 
 The `atoi` (ASCII to integer) function in C converts a string to an integer. It reads characters in the string and interprets them as a numeric value, stopping at the first non-numeric character or at the end of the string. If the string starts with a valid integer format (including optional whitespace, an optional sign (+ or -), and digits), atoi will return the integer equivalent.
+
+**strnstr**
+
+In C, the `strnstr` function is used to locate the first occurrence of a substring (needle) within the initial part of another string (haystack), limited by a specified number of characters (len).
+If needle is found within the specified len range, strnstr returns a pointer to the beginning of the found substring in haystack.
+If needle is not found within the first len characters, it returns NULL.
+If needle is an empty string (""), strnstr returns a pointer to the beginning of haystack, as any string contains an empty substring at its start.
+
