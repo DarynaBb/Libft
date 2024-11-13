@@ -71,3 +71,9 @@ If needle is found within the specified len range, strnstr returns a pointer to 
 If needle is not found within the first len characters, it returns NULL.
 If needle is an empty string (""), strnstr returns a pointer to the beginning of haystack, as any string contains an empty substring at its start.
 
+**memset**
+
+The `memset` function in C is used to set a block of memory to a specific value. It’s commonly used to initialize or reset memory to a particular byte value. 
+`ptr`: A pointer to the memory block that you want to set.
+`value`: The value to set each byte of memory to. This is typically provided as an int, but it's cast to an unsigned char, so only the lowest 8 bits are used.
+`num`: The number of bytes to set in the memory block.
