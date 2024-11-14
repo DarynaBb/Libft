@@ -117,3 +117,9 @@ The memcmp function in C compares two blocks of memory (arrays, structures, or a
 A negative value if the first `n` bytes of `ptr1` are lexicographically less than those of `ptr2`.
 A positive value if the first `n` bytes of `ptr1` are lexicographically greater than those of `ptr2`.
 Zero if the first `n` bytes of `ptr1` and `ptr2` are equal.
+
+**calloc**
+In C, the `calloc` function is used to allocate memory for an array of elements and initialize the memory to zero. 
+`num`: The number of elements you want to allocate memory for.
+`size`: The size of each element in bytes.
+`calloc` allocates memory for num elements, each of size size bytes, and it initializes all of the bytes in the allocated memory to zero.
