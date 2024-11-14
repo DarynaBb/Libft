@@ -98,3 +98,11 @@ The `memmove` function in C is used to copy a specified number of bytes from a s
 `dest`: Pointer to the destination memory block where data is to be copied.
 `src`: Pointer to the source memory block from which data will be copied.
 `n`: Number of bytes to copy.
+
+**memchr**
+
+The `memchr` function in C is used to locate the first occurrence of a specified value in a block of memory. It searches for a given character within a specified number of bytes.
+`ptr`: A pointer to the block of memory to be searched.
+`value`: The value (character) to search for, passed as an int but treated as an unsigned char.
+`num`: The number of bytes to search.
+It returns a pointer to the first occurrence of value in the block of memory, or NULL if the value is not found.
