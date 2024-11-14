@@ -106,3 +106,14 @@ The `memchr` function in C is used to locate the first occurrence of a specified
 `value`: The value (character) to search for, passed as an int but treated as an unsigned char.
 `num`: The number of bytes to search.
 It returns a pointer to the first occurrence of value in the block of memory, or NULL if the value is not found.
+
+**memcmp**
+
+The memcmp function in C compares two blocks of memory (arrays, structures, or any type of memory) byte by byte. It is often used to check if two memory regions are identical or to determine which one is lexicographically smaller or greater.
+`ptr1`: A pointer to the first memory block.
+`ptr2`: A pointer to the second memory block.
+`n`: The number of bytes to compare.
+
+A negative value if the first `n` bytes of `ptr1` are lexicographically less than those of `ptr2`.
+A positive value if the first `n` bytes of `ptr1` are lexicographically greater than those of `ptr2`.
+Zero if the first `n` bytes of `ptr1` and `ptr2` are equal.
