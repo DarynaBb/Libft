@@ -119,6 +119,7 @@ A positive value if the first `n` bytes of `ptr1` are lexicographically greater 
 Zero if the first `n` bytes of `ptr1` and `ptr2` are equal.
 
 **calloc**
+
 In C, the `calloc` function is used to allocate memory for an array of elements and initialize the memory to zero. 
 `num`: The number of elements you want to allocate memory for.
 `size`: The size of each element in bytes.
