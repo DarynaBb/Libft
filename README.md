@@ -93,6 +93,7 @@ The `memcpy` function in C is used to copy a block of memory from one location t
 `n`: The number of bytes to copy from src to dest.
 
 **memmove**
+
 The `memmove` function in C is used to copy a specified number of bytes from a source memory block to a destination memory block. Its key feature is that it correctly handles overlapping memory regions, which memcpy does not. If the source and destination overlap, memmove ensures that the original source content is copied safely by first copying the data into a temporary buffer.
 `dest`: Pointer to the destination memory block where data is to be copied.
 `src`: Pointer to the source memory block from which data will be copied.
