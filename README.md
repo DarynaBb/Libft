@@ -128,11 +128,14 @@ In C, the `calloc` function is used to allocate memory for an array of elements 
 **substr**
 
 Allocates (with malloc(3)) and returns a substring
-from the string `s`.
-The substring begins at index `start` and is of
-maximum size `len`.
+from the string `s`. The substring begins at index `start` and is of maximum size `len`.
 `s`: The string from which to create the substring.
 `start`: The start index of the substring in the
-string ’s’.
-`len`: The maximum length of the substring.
-Returns the substring. NULL if the allocation fails.
+string ’s’. 
+`len`: The maximum length of the substring. Returns the substring. NULL if the allocation fails.
+
+**strjoin**
+Allocates (with malloc(3)) and returns a new string, which is the result of the concatenation of `s1` and `s2`.
+`s1`: The prefix string.
+`s2`: The suffix string.
+Returns the new string. NULL if the allocation fails.
