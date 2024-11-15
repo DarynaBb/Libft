@@ -27,6 +27,4 @@ char *ft_strjoin(char const *s1, char const *s2)
     }    
     *ptr = '\0';
     return (str);
-    
-
 }
