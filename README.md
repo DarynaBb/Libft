@@ -124,3 +124,15 @@ In C, the `calloc` function is used to allocate memory for an array of elements 
 `num`: The number of elements you want to allocate memory for.
 `size`: The size of each element in bytes.
 `calloc` allocates memory for num elements, each of size size bytes, and it initializes all of the bytes in the allocated memory to zero.
+
+**substr**
+
+Allocates (with malloc(3)) and returns a substring
+from the string `s`.
+The substring begins at index `start` and is of
+maximum size `len`.
+`s`: The string from which to create the substring.
+`start`: The start index of the substring in the
+string ’s’.
+`len`: The maximum length of the substring.
+Returns the substring. NULL if the allocation fails.
