@@ -147,3 +147,10 @@ Allocates (with malloc(3)) and returns a copy of `s1` with the characters specif
 `s1`: The string to be trimmed.
 `set`: The reference set of characters to trim.
 Returns the trimmed string. NULL if the allocation fails.
+
+**split**
+
+Allocates (with malloc(3)) and returns an array of strings obtained by splitting `s` using the character ’c’ as a delimiter. The array must end with a NULL pointer.
+`s`: The string to be split.
+`c`: The delimiter character.
+Returns the array of new strings resulting from the split. NULL if the allocation fails.
