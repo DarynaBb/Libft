@@ -1,16 +1,4 @@
-#include <stdio.h>
-
-size_t  ft_strlen(const char *str)
-{
-    size_t length = 0;
-
-    while (*str)
-    {
-        length++;
-        str++;
-    }
-    return (length);
-}
+#include "libft.h"
 
 char *ft_strrchr(const char *str, int c)
 {
