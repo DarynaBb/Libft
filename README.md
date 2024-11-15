@@ -140,3 +140,10 @@ Allocates (with malloc(3)) and returns a new string, which is the result of the 
 `s1`: The prefix string.
 `s2`: The suffix string.
 Returns the new string. NULL if the allocation fails.
+
+**strtrim**
+
+Allocates (with malloc(3)) and returns a copy of `s1` with the characters specified in `set` removed from the beginning and the end of the string.
+`s1`: The string to be trimmed.
+`set`: The reference set of characters to trim.
+Returns the trimmed string. NULL if the allocation fails.
