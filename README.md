@@ -174,3 +174,10 @@ Applies the function `f` on each character of the string passed as argument, pas
 `s`: The string on which to iterate.
 `f`: The function to apply to each character.
 Return value: None.
+
+**putchar_fd**
+
+Outputs the character `c` to the given file descriptor.
+`c`: The character to output.
+`fd`: The file descriptor on which to write.
+Return value: None.
