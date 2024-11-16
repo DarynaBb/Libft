@@ -195,3 +195,10 @@ Outputs the string `s` to the given file descriptor followed by a newline.
 `s`: The string to output.
 `fd`: The file descriptor on which to write.
 Return value: None.
+
+**putnbr_fd**
+
+Outputs the integer `n` to the given file descriptor.
+`n`: The integer to output.
+`fd`: The file descriptor on which to write.
+Return value: None.
