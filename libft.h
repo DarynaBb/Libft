@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <limits.h>
 
 int ft_isalnum(int c);
 int ft_atoi(const char *str);
