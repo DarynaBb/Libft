@@ -156,6 +156,7 @@ Allocates (with malloc(3)) and returns an array of strings obtained by splitting
 Returns the array of new strings resulting from the split. NULL if the allocation fails.
 
 **itoa**
+
 Allocates (with malloc(3)) and returns a string representing the integer received as an argument. Negative numbers must be handled.
 `n`: the integer to convert.
 The string representing the integer. NULL if the allocation fails.
