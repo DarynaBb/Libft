@@ -181,3 +181,10 @@ Outputs the character `c` to the given file descriptor.
 `c`: The character to output.
 `fd`: The file descriptor on which to write.
 Return value: None.
+
+**putstr_fd**
+
+Outputs the string `s` to the given file descriptor.
+`s`: The string to output.
+`fd`: The file descriptor on which to write.
+Return value: None.
