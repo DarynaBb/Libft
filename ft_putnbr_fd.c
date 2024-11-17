@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int n_is_negative(int n, int fd)
+static int n_is_negative(int n, int fd)
 {
     if (n < 0)
     {

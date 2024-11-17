@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int ft_is_garbage(const char c, char const *set)
+static int ft_is_garbage(const char c, char const *set)
 {
     while (*set)
     {

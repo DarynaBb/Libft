@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int count_words(char const *s, char c)
+static int count_words(char const *s, char c)
 {
     int saw_word = 0;
     int num_of_words = 0;
@@ -22,7 +22,7 @@ int count_words(char const *s, char c)
     return num_of_words;
 }
 
-char **allocate_array(char const *s, char c)
+static char **allocate_array(char const *s, char c)
 {
     int arr_size = count_words(s, c);
     char **str_array;
@@ -42,7 +42,7 @@ char **allocate_array(char const *s, char c)
     return (str_array);
 }
 
-int allocate_word(char **str_array, int k, int size_of_string)
+static int allocate_word(char **str_array, int k, int size_of_string)
 {
     str_array[k] = (char *)malloc((size_of_string + 1) * sizeof(char));
     if (str_array[k] == NULL)
@@ -55,7 +55,7 @@ int allocate_word(char **str_array, int k, int size_of_string)
     return (1);
 }
 
-char **allocate_strs(char const *s, char c)
+static char **allocate_strs(char const *s, char c)
 {
     char **str_array = allocate_array(s, c);
     if (str_array == NULL)

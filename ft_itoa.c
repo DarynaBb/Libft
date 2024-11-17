@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int char_count(int n)
+static int char_count(int n)
 {
     int count = 0;
     if (n <= 0)
@@ -13,7 +13,7 @@ int char_count(int n)
     return (count);
 }
 
-int n_is_negative(int n, char *str, int *str_size)
+static int n_is_negative(int n, char *str, int *str_size)
 {
 if (n < 0)
     {
