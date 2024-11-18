@@ -2,22 +2,17 @@
 
 char *ft_strrchr(const char *str, int c)
 {
-    const char *original_str = str;
+    char u_ch;
+    int str_len;
 
-    if (c == '\0')
+    u_ch = (char)c;
+    str_len = ft_strlen(str);
+    while (str_len >= 0)
     {
-        return (char *)(str + ft_strlen(str));
+        if (str[str_len] == u_ch)
+            return ((char *)(str + str_len));
+        str_len--;
     }
-    str = str + ft_strlen(str) - 1;
-    while (str >= original_str)
-    {
-        if (*str == c)
-        {
-            return (char *)str;
-        }
-        str--;
-    }
-    
     return (NULL);
 }
 
