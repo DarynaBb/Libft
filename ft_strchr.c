@@ -2,13 +2,16 @@
 
 char *ft_strchr(const char *str, int c)
 {
-    if (c == '\0')
+    unsigned char uch;
+
+    uch = (unsigned char)c;
+    if (uch == '\0')
     {
         return (char *)(str + ft_strlen(str));
     }
     while (*str)
     {
-        if (*str == c)
+        if (*str == uch)
         {
             return (char *)(str);
         } 
