@@ -1,70 +1,79 @@
 #include "libft.h"
 
-static int count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
-    int saw_word = 0;
-    int num_of_words = 0;
-    int i = 0;
-    
-    while (s[i])
-    {
-        if (s[i] != c && saw_word == 0)
-        {
-            saw_word = 1;
-            num_of_words++;
-        }
-        if (s[i] == c)
-        {
-            saw_word = 0;
-        }
-        i++;
-    }
-    return num_of_words;
+	int	saw_word;
+	int	num_of_words;
+	int	i;
+
+	saw_word = 0;
+	num_of_words = 0;
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] != c && saw_word == 0)
+		{
+			saw_word = 1;
+			num_of_words++;
+		}
+		if (s[i] == c)
+			saw_word = 0;
+		i++;
+	}
+	return (num_of_words);
 }
 
-static char **allocate_array(char const *s, char c)
+static char	**allocate_array(char const *s, char c)
 {
-    int arr_size = count_words(s, c);
-    char **str_array;
-    if (arr_size > 0)
-    {
-        str_array = (char **)malloc((arr_size + 1) * sizeof(char *));
-        if (str_array == NULL)
-        return (NULL);
-        str_array[arr_size] = NULL;
-    } else 
-    {
-        str_array = (char **)malloc(sizeof(char *));
-        if (str_array == NULL)
-        return (NULL);
-        str_array[0] = NULL;
-    }
-    return (str_array);
+	int		arr_size;
+	char	**str_array;
+
+	arr_size = count_words(s, c);
+	if (arr_size > 0)
+	{
+		str_array = (char **)malloc((arr_size + 1) * sizeof(char *));
+		if (str_array == NULL)
+			return (NULL);
+		str_array[arr_size] = NULL;
+	}
+	else
+	{
+		str_array = (char **)malloc(sizeof(char *));
+		if (str_array == NULL)
+			return (NULL);
+		str_array[0] = NULL;
+	}
+	return (str_array);
 }
 
-static int allocate_word(char **str_array, int k, int size_of_string)
+static int	allocate_word(char **str_array, int k, int size_of_string)
 {
-    str_array[k] = (char *)malloc((size_of_string + 1) * sizeof(char));
-    if (str_array[k] == NULL)
-    {
-        while (k > 0)
-            free(str_array[--k]);
-        free(str_array);
-        return (0);
-    }
-    return (1);
+	str_array[k] = (char *)malloc((size_of_string + 1) * sizeof(char));
+	if (str_array[k] == NULL)
+	{
+		while (k > 0)
+			free(str_array[--k]);
+		free(str_array);
+		return (0);
+	}
+	return (1);
 }
 
-static char **allocate_strs(char const *s, char c)
+static char	**allocate_strs(char const *s, char c)
 {
-    char **str_array = allocate_array(s, c);
-    if (str_array == NULL)
-        return (NULL);
-    int saw_word = 0;
-    int size_of_string = 0;
-    int i = 0;
-    int k = 0;
-    
+	char	**str_array;
+    int saw_word;
+    int size_of_string;
+    int i;
+    int k;
+
+    saw_word = 0;
+    size_of_string = 0;
+    i = 0;
+    k = 0;
+	str_array = allocate_array(s, c);
+	if (str_array == NULL)
+		return (NULL);
     while (s[i])
     {
         if (s[i] != c)

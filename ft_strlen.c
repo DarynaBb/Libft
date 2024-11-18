@@ -1,17 +1,17 @@
 #include "libft.h"
 
-size_t  ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-    size_t length = 0;
+	size_t	length;
 
-    while (*str)
-    {
-        length++;
-        str++;
-    }
-    return (length);
+	length = 0;
+	while (*str)
+	{
+		length++;
+		str++;
+	}
+	return (length);
 }
-
 /*#include <stdio.h>
 int main() {
     char s1[] = "nsdggf ";

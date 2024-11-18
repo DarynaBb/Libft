@@ -1,10 +1,9 @@
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    return (c >= 48 && c <= 57);
+	return (c >= 48 && c <= 57);
 }
-
 /*#include <stdio.h>
 int main() {
     char s1 = 'v';
