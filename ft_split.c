@@ -23,125 +23,77 @@ static int	count_words(char const *s, char c)
 	return (num_of_words);
 }
 
-static char	**allocate_array(char const *s, char c)
+static char	*allocate_word(const char *s, char c)
 {
-	int		arr_size;
-	char	**str_array;
+	int		s_len;
+	int		i;
+	char	*word;
 
-	arr_size = count_words(s, c);
-	if (arr_size > 0)
-	{
-		str_array = (char **)malloc((arr_size + 1) * sizeof(char *));
-		if (str_array == NULL)
-			return (NULL);
-		str_array[arr_size] = NULL;
-	}
-	else
-	{
-		str_array = (char **)malloc(sizeof(char *));
-		if (str_array == NULL)
-			return (NULL);
-		str_array[0] = NULL;
-	}
-	return (str_array);
-}
-
-static int	allocate_word(char **str_array, int k, int size_of_string)
-{
-	str_array[k] = (char *)malloc((size_of_string + 1) * sizeof(char));
-	if (str_array[k] == NULL)
-	{
-		while (k > 0)
-			free(str_array[--k]);
-		free(str_array);
-		return (0);
-	}
-	return (1);
-}
-
-static char	**allocate_strs(char const *s, char c)
-{
-	char	**str_array;
-    int saw_word;
-    int size_of_string;
-    int i;
-    int k;
-
-    saw_word = 0;
-    size_of_string = 0;
-    i = 0;
-    k = 0;
-	str_array = allocate_array(s, c);
-	if (str_array == NULL)
+	s_len = 0;
+	i = 0;
+	while (s[s_len] && s[s_len] != c)
+		s_len++;
+	word = (char *)malloc((s_len + 1) * sizeof(char));
+	if (!word)
 		return (NULL);
-    while (s[i])
-    {
-        if (s[i] != c)
-        {
-            if (saw_word == 0)
-                saw_word = 1;
-            size_of_string++;    
-        }
-        else if (saw_word == 1)
-        {
-            if (!allocate_word(str_array, k, size_of_string))
-                return (NULL);
-            saw_word = 0;
-            size_of_string = 0;
-            k++;
-        }
-        i++;
-    }
-    if (saw_word == 1)
-    {
-        if (!allocate_word(str_array, k, size_of_string))
-            return (NULL);
-        k++;    
-    }
-    str_array[k] = NULL;
-    return (str_array);
+	while (i < s_len)
+	{
+		word[i] = s[i];
+		i++;
+	}
+	word[i] = '\0';
+	return (word);
 }
 
-char **ft_split(char const *s, char c)
+static void	free_result(char **result, int words_allocated)
 {
-    if (!s)
-        return (NULL);
-    char **arr = allocate_strs(s, c);
-    if (!arr)
-        return (NULL);
-    int saw_word = 0;
-    int i = 0;
-    int k = 0;
-    int j = 0;
-    
-    while (s[i])
-    {
-        if (s[i] != c)
-        {
-            if (saw_word == 0)
-            {
-                saw_word = 1;
-                j = 0;
-            }
-            arr[k][j] = s[i];
-            j++;
-        }
-        else if (saw_word == 1)
-        {
-            arr[k][j] = '\0';
-            saw_word = 0;
-            k++;
-        }
-        i++;
-    }
-    if (saw_word == 1)
-    {
-        arr[k][j] = '\0';
-        k++;
-    }
-    return (arr);
+	while (words_allocated >= 0)
+	{
+		free(result[words_allocated]);
+		words_allocated--;
+	}
+	free(result);
 }
 
+static char	**fill_result(char **result, const char *s, char c)
+{
+	int	index;
+
+	index = 0;
+	while (*s)
+	{
+		if (*s != c)
+		{
+			result[index] = allocate_word(s, c);
+			if (!result[index])
+			{
+				free_result(result, index);
+				return (NULL);
+			}
+			index++;
+			while (*s && *s != c)
+				s++;
+		}
+		else
+			s++;
+	}
+	result[index] = NULL;
+	return (result);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int		word_count;
+	char	**result;
+
+	if (!s)
+		return (NULL);
+	word_count = count_words(s, c);
+	result = (char **)malloc((word_count + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
+	return (fill_result(result, s, c));
+}
 // void free_split(char **arr)
 // {
 //     int i = 0;
@@ -152,7 +104,6 @@ char **ft_split(char const *s, char c)
 //     }
 //     free(arr);
 // }
-
 // void print_split(char **arr)
 // {
 //     int i = 0;
@@ -162,7 +113,6 @@ char **ft_split(char const *s, char c)
 //         i++;
 //     }
 // }
-
 // int main()
 // {
 //     char const s[] = "hello,world,,,,hi,,,,,,,h,,,,,,f";
@@ -179,13 +129,3 @@ char **ft_split(char const *s, char c)
 //     }
 //     return 0;
 // }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
