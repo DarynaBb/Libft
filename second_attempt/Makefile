@@ -52,6 +52,7 @@ AR = ar
 ARFLAGS = rcs
 
 # Colors for better readability
+# ANSI escape codes
 GREEN = \033[0;32m
 RED = \033[0;31m
 RESET = \033[0m
@@ -65,6 +66,7 @@ $(NAME): $(OBJ) $(HEADER)
 	@$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 	@echo "$(GREEN)Library $(NAME) created!$(RESET)"
 
+#Compiling Source to Object Files
 %.o: %.c $(HEADER)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
